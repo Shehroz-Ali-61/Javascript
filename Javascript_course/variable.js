@@ -8,6 +8,11 @@ var accountState;
 
 accountEmail = "shehrozrajout829@gmail.com";
 accountPassword = "victory8588";
-accountCity = "Lahore";
+accountCity = "Lahore"
+
+/*  Note:
+    prefer not to use var
+    because on issue in block space and functional scope
+*/
 
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
