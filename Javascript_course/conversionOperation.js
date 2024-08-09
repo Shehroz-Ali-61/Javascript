@@ -1,4 +1,4 @@
-let score = "scehroz";
+let score = "shehroz";
 
 // let score = null;
 // let score = undefined;
@@ -7,5 +7,13 @@ let score = "scehroz";
 
 
 let isNumber = Number(score);
-console.log(typeof(isNumber));
-console.log(isNumber);
+// console.log(typeof(isNumber));
+// console.log(isNumber);
+
+let isbolean = 0;
+let boleanislogedin = Boolean(isbolean);
+console.log(boleanislogedin);
+        //Boolean Details
+// 1 => true;  0 => false
+// "" => false
+// "Pakistan" => true
