@@ -12,8 +12,13 @@ let isNumber = Number(score);
 
 let isbolean = 0;
 let boleanislogedin = Boolean(isbolean);
-console.log(boleanislogedin);
+// console.log(boleanislogedin);
         //Boolean Details
 // 1 => true;  0 => false
 // "" => false
 // "Pakistan" => true
+
+let isString = 33;
+let stringNumber = String(isString);
+console.log(stringNumber);
+console.log(typeof stringNumber);
