@@ -2,18 +2,18 @@
     Object constructor <== Singelton maked in this object
 */
 
-/*const tindder = new Object();
+const tindder = new Object();
 // const tindder = {};
 tindder.id = "Bscsf21a123";
 tindder.name = "Shehroz";
 tindder.isLoggedIn = false;
 
-console.log(tindder); */
+// console.log(tindder); 
 
 
 
 ///+++++++++ "Nusted Object" +++++++++ <<== we can use nusted object and access easily.
-/*
+
 const regularUser = {
     email: "rajout829@gmail.com",
     fullName: {
@@ -23,10 +23,10 @@ const regularUser = {
         }
     }
 };
-console.log(regularUser["email"]);
-console.log(regularUser.fullName);
-console.log(regularUser.fullName.UserfullName["lastName"]);
-*/
+// console.log(regularUser["email"]);
+// console.log(regularUser.fullName);
+// console.log(regularUser.fullName.UserfullName["lastName"]);
+
 
 
 
@@ -38,7 +38,7 @@ const obj1 = {
 };
 const obj2 = {
     age: 22,
-    address: "Muridke"
+    address: "Islamabad"
 };
 const obj3 = {
     email: "@Yahoo.com",
