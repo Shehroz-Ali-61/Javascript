@@ -30,8 +30,7 @@ const regularUser = {
 
 
 
-
-
+// +++++++++++++ Combining of all Objects +++++++++++
 const obj1 = {
     id: "126_A",
     name: "sammy king"
@@ -52,4 +51,24 @@ const obj4_2ndWay = Object.assign({}, obj1, obj2, obj3); // <== 2nd Way to combi
 // console.log(obj4_2ndWay);
 
 const obj4_3rdWay = {...obj1, ...obj2, ...obj3}; // <= 3rd and best way to combile all objects. we will use spread for combine all objects.
-console.log(obj4_3rdWay);
+// console.log(obj4_3rdWay);
+
+
+
+
+//+++++++++++++ Array to Object +++++++++++++
+/*const user = [
+    {
+        id = 126,
+        email = "S@gmail.com"
+    }, 
+    {
+        id = 132,
+        email = "H@gmail.com"
+    }
+] */
+// console.log(tindder);
+// console.log(Object.keys(tindder));
+// console.log(Object.values(tindder));
+// console.log(Object.entries(tindder));
+console.log(regularUser.hasOwnProperty("email")); // This "hasOwnProperty(property name)"" method check the property in the Object.
