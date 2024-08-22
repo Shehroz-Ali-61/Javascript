@@ -21,5 +21,17 @@ const langObj = {
 };
 for(const key in langObj){
     // console.log(key + ":- " +langObj[key]);
-    console.log(`${key} stand for ${langObj[key]}`);
+    //console.log(`${key} stand for ${langObj[key]}`);
+}
+
+
+
+
+
+
+//-------- For-in loop at Arrays ---------
+const myarray = ["java","swift","kotline","c++"];
+for(const key in myarray){
+    //console.log(key);   //index of array will be return by "key"
+    console.log(myarray[key]);
 }
