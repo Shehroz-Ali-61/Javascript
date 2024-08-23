@@ -10,6 +10,8 @@ const myObj = {
 
 
 //"NOTE": "for-in loop" ky andr hamesha "key" sy he sab kuch access kiya jay ga. value sy object ki value nae melen gen.
+//["","",""]
+//[{},{},{}]
 
 
 //-------- For-in loop at Objects --------
