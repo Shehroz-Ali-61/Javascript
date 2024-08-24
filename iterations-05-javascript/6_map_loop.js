@@ -17,4 +17,28 @@ let result = numbers
                 .filter((num)=>{
                     return num>25 && num<35;
                 });
-console.log(result);
+// console.log(result);
+
+
+
+
+
+
+
+
+//----------------- reduce loop by return function -----------------
+const array = [1,2,3,4,5];
+const total = array.reduce(function(accumulater, currentvalue) {
+    // console.log(`accumulater: ${accumulater} , currentValue: ${currentvalue}`);
+    return accumulater + currentvalue;
+}, 0);  
+// ^------- here "0" is initialvalue
+// console.log(`accumulater current value: ${total}`);
+
+
+
+
+//----------------- reduce loop by Arrow function -----------------
+const number = [1,2,3,4,5,6];
+const Result = number.reduce( (accumulater, currentValue) => (accumulater + currentValue), 2 );
+console.log(Result);                                    // initial value-------------------^
