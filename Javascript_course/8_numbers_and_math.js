@@ -10,12 +10,12 @@ const balance = new Number(100); //Note: it's also a Numbr type but show "value 
 // console.log(balance.toString().length);
 // console.log(balance.toFixed(2)); //Returns a string representing a number in fixed-point notation.
 
-let otherNumber = 126.26;
+let otherNumber = 126.626;
 // console.log(otherNumber.toPrecision(3));
 let pointNumber = 499.66;
 // console.log(pointNumber.toPrecision(3));
 
-const hundered = 10000000;
+const hundered = 100000000;
 // console.log(hundered.toLocaleString());
 // console.log(hundered.toLocaleString("en-IN")); // Acc to indian currency
 // console.log(Number.MAX_VALUE);
@@ -37,9 +37,14 @@ const hundered = 10000000;
 // console.log((Math.random() * 10) + 1);
 // console.log(Math.floor((Math.random() * 10) + 1));
 
-let min = 10;
-let max = 20;
+// let min = 5;
+// let max = 15;
 // console.log(Math.random() * (max - min + 1));
 // console.log(Math.random() * (max - min + 1) + min);
 // console.log(Math.floor(Math.random() * (max - min + 1) + min));
+// console.log(Math.floor(Math.random() * (max-min) + 6));
 
+
+let min = 100;
+let max = 999;
+console.log(`Facebook 3-Digit OTP: ${Math.floor(Math.random() * (max - min) + 100)}`);
