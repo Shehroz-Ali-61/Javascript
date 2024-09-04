@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div id="main">
+        <h1 id="title" class="heading">DOM Functions Manipulations <span style="display: none;">Chai or Code Manipulations</span></h1>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+        <input type="password" name="" id="">
+        <!-- <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul> -->
+
+        <ul>
+            <li class="list-item">Bangladaish</li>
+            <li class="list-item">Italy</li>
+            <li class="list-item">Chaina</li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    document.getElementById("title");
+    document.querySelector("h2");
+    document.querySelector("#main");
+    document.querySelector(".heading");
+    document.querySelector("input[type='password']");
+    const myul = document.querySelector("ul");
+    const changeColor = myul.querySelector("li");
+    changeColor.style.backgroundColor = "green";
+    changeColor.style.padding = "5px";
+    changeColor.innerText = "Five";
+
+
+    const allSelector = document.querySelectorAll("li");
+    allSelector[1].style.color = "yellow"
+    
+    const headingSelector = document.querySelectorAll("h1");
+    headingSelector[0].style.color = "green";
+
+
+
+    const classList = document.getElementsByClassName("list-item");
+    const convertedArray = Array.from(classList);
+    convertedArray.forEach((item)=>{
+        item.style.color = "orange";
+    })
+    
+
+</script>
+</html>
