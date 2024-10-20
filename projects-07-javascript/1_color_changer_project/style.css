@@ -1,0 +1,48 @@
+body{
+    background-color: #212121;
+    color: white;
+}
+nav{
+    height: 50px;
+    background-color: lightgray;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation a{
+    color: black;
+    
+    text-decoration: none;
+    padding: 15px 40px;
+    
+}
+.navigation a:hover{
+    text-shadow: 4px 3px 5px green;
+    transition: 1s;
+}
+.main{
+    text-align: center;
+}
+#grey{
+    background-color: grey;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+.button{
+    padding: 20px 20px;
+    cursor: pointer;
+}
+#rem{
+    cursor: pointer;
+    background-color: rgb(28, 66, 104);
+    padding: 15px 40px;
+}
