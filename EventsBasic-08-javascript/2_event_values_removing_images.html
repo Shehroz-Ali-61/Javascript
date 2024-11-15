@@ -18,10 +18,11 @@
         </ul>
     </div>
 </body>
+p   
 <script>
     document.querySelector("#images").addEventListener("click",function(e){
         console.log(e.target.tagName);
-        
+
         if(e.target.tagName === 'IMG'){
             console.log(e.target.id);
             let removePic = e.target.parentNode;
