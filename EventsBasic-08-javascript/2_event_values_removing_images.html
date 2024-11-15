@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <li>
+                <img id="scare" src="https://images.pexels.com/photos/28614694/pexels-photo-28614694/free-photo-of-peaceful-archway-in-historic-mardin-monastery.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="200px" height="200px">
+            </li>
+            <li>
+                <img id="beauty" src="https://images.pexels.com/photos/28993970/pexels-photo-28993970/free-photo-of-stylish-woman-in-black-against-concrete-wall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="200px" height="200px" alt="">
+            </li>
+            <li>
+                <a id="google" href="https://www.google.com/" >Google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.querySelector("#images").addEventListener("click",function(e){
+        console.log(e.target.tagName);
+        
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removePic = e.target.parentNode;
+            removePic.remove();
+        } 
+
+    }, false);
+
+    
+</script>
+</html>
