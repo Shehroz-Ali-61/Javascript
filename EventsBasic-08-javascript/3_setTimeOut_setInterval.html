@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Course</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+
+
+    // Here define SetTimeOut function || clearTimeOut function
+    // start.addEventListener("click",function(){
+    //     let con = setTimeout(function(){
+    //         document.querySelector("h1").innerHTML = "JS Best Series!";
+    //     },2000)
+    //     stop.addEventListener("click",function(){
+    //         document.querySelector("h1").style.color = "red";
+
+    //         clearTimeout(con);
+    //     })
+    // });
+    
+
+    // Here define setInterval function || clearIntervel function
+    start.addEventListener("click",function(){
+        let interval = setInterval(function(){
+            console.log("hello",Date());
+        }, 2000)
+        stop.addEventListener("click",function(){
+            clearInterval(interval)
+        })
+    })
+
+
+</script>
+</html>
