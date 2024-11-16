@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .main{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Javascript Best Series</h1>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </div>
+</body>
+<script>
+    function changeColor(){
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for(let i=0; i<6; i++){
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+    let starting = document.querySelector("#start");
+    let stoping = document.querySelector("#stop");
+
+    let interval;
+    const startBackgroundColor = function(){
+        if(!interval){
+            interval = setInterval(changingcolor,1000)
+        }
+        function changingcolor(){
+            document.body.style.backgroundColor = changeColor();
+            document.body.style.transition = "1s";
+
+        }
+    };
+
+    const stopBackgroundColor = function(){
+        clearInterval(interval);
+        interval = null;
+    };
+
+    starting.addEventListener("click",startBackgroundColor);
+    stoping.addEventListener("click",stopBackgroundColor);
+</script>
+</html>
