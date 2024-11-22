@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form id="creatAccount">
+        <input type="text"  id="username" placeholder="Account Name" name="username">
+        <input type="text" id="customerAmmount" placeholder="Enter amount..." name="customerAmmount">
+        <button>Creat Account</button>
+    </form>
+    <hr>
+    <form id="depositAccount">
+        <input type="number"  id="accountNumber" placeholder="Account no..." name="accountNo">
+        <input type="text" id="customerBalance" placeholder="Enter deposit amount..." name="depositBalance">
+        <button>Deposit Amount</button>
+    </form>
+    <hr>
+    <form id="widhrawAccount">
+        <input type="number"  id="widhrawAcNumber" placeholder="Account no..." name="widhrawAccountNo">
+        <input type="text" id="widhrawBalance" placeholder="Enter widhraw amount..." name="widhrawBalance">
+        <button>Widhraw Amount</button>
+    </form>
+    
+</body>
+<script>
+    function BankAccount(customerName, balance = 0){
+        this.customerName = customerName;
+        this.accountNo = Date.now();
+        this.balance = balance;
+
+        this.deposit = function(amount){
+            this.balance += amount;
+        }
+
+        this.widhraw = function(amount){
+            this.balance =this.balance - amount;
+        }
+
+    }
+    // let accountDetails = new BankAccount("Shehroz", 5000);
+    // console.log(accountDetails);
+
+    // accountDetails.deposit(6000);
+    // accountDetails.widhraw(2000);
+
+    let accounts = [];
+    let accountForm = document.querySelector("#creatAccount");
+    let username = document.querySelector("#username");
+    let customerBalance = document.querySelector("#customerAmmount");
+
+    accountForm.addEventListener("submit",function(e){
+        e.preventDefault();
+        
+        const account = new BankAccount(username.value, +customerBalance.value);
+        accounts.push(account);
+        console.log(accounts);
+    })
+
+
+
+    let depositeForm = document.querySelector("#depositAccount");
+    let accountNum = document.querySelector("#accountNumber");
+    let accountBalance = document.querySelector("#customerBalance");
+    depositeForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        account = accounts.find((account) => account.accountNo === +accountNum.value);
+        account.deposit(+accountBalance.value);
+        console.log(accounts);
+    });
+
+
+
+
+    let widhrawForm = document.querySelector("#widhrawAccount");
+    let acNo = document.querySelector("#widhrawAcNumber");
+    let widhrawBalance = document.querySelector("#widhrawBalance");
+    widhrawForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        account = accounts.find((account) => account.accountNo === +acNo.value);
+        account.widhraw(+widhrawBalance.value);
+        console.log(accounts);
+    })
+
+</script>
+
+</html>
