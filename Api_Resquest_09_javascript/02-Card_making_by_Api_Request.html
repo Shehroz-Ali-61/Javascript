@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    #mainform{
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        width: 400px;
+        background-color: grey;
+        padding: 20px 10px;
+    }
+    button{
+        margin-left: 20px;
+    }
+    #result{
+        border-radius: 5px;
+        width: 300px;
+        height: 200px;
+        display: none;
+        transition: 5s;
+    }
+    #images{
+        transition: 2s;
+    }
+</style>
+<body>
+    <form id="mainform">
+        
+        <p id="inputfiield"><label for="urls">url</label>
+        <input type="text" name="url" id="urls"></p>
+        <button>submit</button>
+        <br><hr>
+        <p id="result">
+            <img id="images" width="100%" height="100%"/>
+        </p>
+    </form>
+</body> 
+<script>
+    const page = document.querySelector("#mainform");
+    let imag = document.querySelector("#images");
+    let results = document.querySelector("#result")
+
+    let urlResponses = document.getElementById("urls");
+    const xhr = new XMLHttpRequest();
+
+    page.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        xhr.open("GET", urlResponses.value);
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            if(xhr.readyState === 3){
+                let data = JSON.parse(xhr.responseText);
+                results.style.display = "block";
+                
+                imag.src = data.results[0].picture.large;
+                urlResponses.value = "";
+                console.log(data);
+            }
+        }
+        xhr.send();
+    });
+</script>
+
+</html>
