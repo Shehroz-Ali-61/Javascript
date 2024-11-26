@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Url Api Request Sending </h1>
+    <hr>
+    <h1>Url sy hmesha response String type main ata hai. pher is Sting ko object main convert krny k liy JSON.pase use
+        krky osy Object main convert krty hn or os Object ky zriye "." operator use krky value ko access kiya ja skta hai</h1>
+
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/hiteshchaudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 3) {
+            // let data = JSON.parse(this.responseText);
+            console.log(this.responseText);
+            // console.log(typeof data);
+            // console.log(data.id);
+            // console.log(data.login);
+        }
+    }
+
+    xhr.send();
+</script>
+
+</html>
